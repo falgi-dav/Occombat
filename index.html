@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combat</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="headbar bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="w-100 text-center">
+                        <p class="text-light text-uppercase font-weight-bold">JEU DE COMBAT !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-3 text-center">
+                <h2>Joueur 1</h2>
+                <h5 class="lifeplayer1">point de vie :</h5>
+                <img src="img/gotenk.png" class="img-fluid impGamer1" alt="Responsive image">
+                <div class="control">
+                    <button type="button" class="btn btn-sm btn-info btnPlay1" disabled>Attaquer</button>
+                    <button type="button" class="btn btn-sm btn-info btnDefend1" disabled>Defendre</button>
+                </div>
+                <img src="img/gokuattack.png" class="img-fluid mt-3" alt="Responsive image" id="arme1">
+            </div>
+            <table class="col-lg-6 text-center">
+                <tbody class="plateau">
+                </tbody>
+            </table>
+            <div class="col-lg-3 text-center">
+                <h2>Joueur 2</h2>
+                <h5 class="lifeplayer2">point de vie :</h5>
+                <img src="img/goku2.png" class="img-fluid impGamer2" alt="Responsive image">
+                <div class="control2">
+                    <button type="button" class="btn btn-sm btn-info btnPlay2" disabled>Attaquer</button>
+                    <button type="button" class="btn btn-sm btn-info btnDefend2" disabled>Defendre</button>
+                </div>
+                <img src="img/gokuattack.png" class="img-fluid mt-3" alt="Responsive image" id="arme2">
+            </div>
+        </div>
+    </div>
+    <!--Modal-->
+    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+
+                        <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+                        <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
+                        <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok,
+                            thanks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/joueur.js"></script>
+    <script src="js/plateau.js"></script>
+    <script src="js/armes.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/event.js"></script>
+</body>
+
+</html>

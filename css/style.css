@@ -1,0 +1,66 @@
+
+.contentof {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.headbar{
+
+    height: 100px;
+}
+.impGamer1{
+    max-width: 200px;
+    height: auto;
+}
+.plateau{
+    box-shadow: 5px 5px 5px grey;
+}
+
+table{
+  
+    width: 50%;
+  
+  }
+  td {
+      border: 1px solid #333;
+      text-align: center;
+      height: 50px;;
+  }
+  
+  thead,
+  tfoot {
+      background-color: #333;
+      color: #fff;
+  }
+  #arme1, #arme2{
+    width: 170px;
+    height: auto;
+    box-shadow: 5px 5px 5px grey;
+    background: rgba(30, 144, 255, 0.6);
+    border-radius: 10px;
+    /* animation: shadow-pulse 2s infinite; */
+  }
+
+  @keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+  }
+}

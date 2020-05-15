@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ 
+  <html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>deposer en un point donné</title>
+  </head>
+  <script src="test.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+   
+  <body >
+  
+<style>
+table{
+  
+  width: 50%;
+
+}
+td {
+    border: 1px solid #333;
+    text-align: center;
+    height: 50px;;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+</style>
+
+<table>
+  
+  <tbody class="plateau">
+      
+  </tbody>
+</table>
+
+
+<script>
+
+
+// creation du plateau
+(function test(){
+
+let test = 1;
+
+for(i = 0; i < 10; i++){ $('<tr>').prependTo('.plateau').attr('id', 'tr' + i);
+
+
+  for(i2 = 0; i2 < 16; i2++){ $('<td>').prependTo('#' + 'tr' + i).attr('id',  test).text(test).addClass("vide");
+    test = ++test;
+    }
+  }
+
+player();
+
+})();
+
+
+   
+// definition des obstacles
+(function obs(){
+
+  let nbrObs =  10
+
+  for(let i = 0; i < nbrObs; i++){
+
+    let numbRepeat = Math.round(Math.random() * (148 - 1) + 1);
+    $( ".plateau" ).find( "#" + numbRepeat ).css( "background-color", "red" ).attr('class', 'obstacle');
+    //console.log(numbRepeat);
+
+  }
+
+})();
+
+// creation du player
+function player(){
+
+  let numbRepeat = Math.round(Math.random() * (148 - 1) + 1);
+  let getElement = $( ".plateau" ).find( "#" + numbRepeat ).hasClass( "vide" ).toString();
+  console.log(getElement);
+  
+  $( ".plateau" ).find( "#" + numbRepeat ).css( "background-image", "url(./img/gotenk.png)" ).css('background-size', 'cover').attr('id', 'gamer1');
+  console.log(numbRepeat);
+ 
+}
+
+
+</script>
+
+  </body>
+  </html>
+
